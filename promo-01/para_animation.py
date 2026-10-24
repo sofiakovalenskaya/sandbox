@@ -509,6 +509,7 @@ for screen in bpy.data.screens:
             area.spaces.active.region_3d.view_perspective='CAMERA'
             area.spaces.active.shading.type='MATERIAL'
             area.spaces.active.shading.use_scene_world=True
+            area.spaces.active.shading.use_scene_lights=True
             area.spaces.active.overlay.show_overlays=False
 SCENE.frame_set(round(132*FPS/AUTHOR_FPS))
 bpy.ops.file.pack_all()
