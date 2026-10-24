@@ -381,13 +381,14 @@ AVAILABLE=set(manifest['font_faces_available'])
 card_outline=rounded(CW,CH)
 launch_order=[n for i in range(30) for n in (i,30+i)]
 rank={card_id:i for i,card_id in enumerate(launch_order)}
-# Balance each wave on both sides; fill the upper area before the lower area.
-left_cells=[];right_cells=[]
-for row in reversed(range(6)):
-    left_row=[(c,row) for c in range(5)]
-    right_row=[(c,row) for c in range(5,10)]
-    random.shuffle(left_row);random.shuffle(right_row)
-    left_cells.extend(left_row);right_cells.extend(right_row)
+# Expand from the centre in rings, reaching all four edges and the corners.
+def radius_squared(cell):
+    col,row=cell
+    return ((col-4.5)*(7.30/9))**2+((row-2.5)*(4.26/5))**2
+left_cells=sorted([(c,r) for r in range(6) for c in range(5)],
+                  key=lambda cell:radius_squared(cell)+random.uniform(0,.05))
+right_cells=sorted([(c,r) for r in range(6) for c in range(5,10)],
+                   key=lambda cell:radius_squared(cell)+random.uniform(0,.05))
 cells={}
 for launch_rank,card_id in enumerate(launch_order):
     to_left=launch_rank%4 in (0,3)
@@ -416,23 +417,25 @@ for number in range(60):
     initial=Vector((0,y,-H/2+.012+CH/2))
     t0=176+rank[number]*4
     card['launch_frame']=t0
+    card['clear_frame']=t0+4
     if not is_font:
         halo_width=CW*985/785;halo_height=CH*1268/1068
         halo=mesh_object(f'Задание {ident:02} — мягкая тень',
              [(-halo_width/2,0,-halo_height/2),(halo_width/2,0,-halo_height/2),
               (halo_width/2,0,halo_height/2),(-halo_width/2,0,halo_height/2)],
              [(0,1,2,3)],[card_shadow_mat],uv=[(0,0),(1,0),(1,1),(0,1)],parent=card,col=CARDS)
-        for frame,hidden in [(1,True),(t0+16,True),(t0+17,False),(FINAL_FRAME,False)]:
+        for frame,hidden in [(1,True),(t0+4,True),(t0+5,False),(FINAL_FRAME,False)]:
             halo.hide_render=hidden;halo.keyframe_insert(data_path='hide_render',frame=frame)
             halo.hide_viewport=hidden;halo.keyframe_insert(data_path='hide_viewport',frame=frame)
-        for frame,opacity in [(1,0),(t0+16,0),(t0+29,1),(FINAL_FRAME,1)]:
+        for frame,opacity in [(1,0),(t0+4,0),(t0+16,1),(FINAL_FRAME,1)]:
             halo.color=(1,1,1,opacity);halo.keyframe_insert(data_path='color',index=3,frame=frame)
     col,row=cells[number]
+    card['fill_radius']=math.sqrt(radius_squared((col,row)))
     xx=-3.65+col*(7.30/9)+random.uniform(-.10,.10)
     yy=-2.13+row*(4.26/5)+random.uniform(-.10,.10)
     front_visible=ident in face_up['font' if is_font else 'task']
     card['final_face_up']=front_visible
-    depth=(1.50+number*.012) if front_visible else (.75+number*.009)
+    depth=(1.50+rank[number]*.012) if front_visible else (.75+rank[number]*.009)
     endpoint=TARGET+RIGHT*xx+PLANE_UP*yy+PLANE_NORMAL*depth
     end=local_point(endpoint)
     side_sign=-1 if col<5 else 1
@@ -450,14 +453,15 @@ for number in range(60):
     key(card,1,initial,initial_rotation,1)
     key(card,t0,initial,initial_rotation,1)
     exit_position=Vector((0,y,1.98))
-    exit_quat=Euler((-.07,0,0),'XYZ').to_quaternion()
-    key(card,t0+16,exit_position,exit_quat,1)
+    exit_quat=Quaternion((1,0,0,0))
+    # One complete lift per launch interval avoids a bundle of rising cards.
+    key(card,t0+4,exit_position,exit_quat,1)
     # The entire card clears the opening before it tilts left or right.
-    fan=exit_position.lerp(end,.24)+Vector((side_sign*.22,-.16,.26))
+    fan=exit_position.lerp(end,.24)+Vector((side_sign*.22,-.16,.10))
     fan_rotation=exit_quat.slerp(end_quat,.38)@Euler((pitch,0,yaw),'XYZ').to_quaternion()
-    key(card,t0+28,fan,fan_rotation,1)
-    mid=exit_position.lerp(end,.74)+Vector((side_sign*.10,-.08,.18))
-    key(card,t0+44,mid,exit_quat.slerp(end_quat,.82),1)
+    key(card,t0+18,fan,fan_rotation,1)
+    mid=exit_position.lerp(end,.74)+Vector((side_sign*.10,-.08,.06))
+    key(card,t0+38,mid,exit_quat.slerp(end_quat,.82),1)
     near=end+Vector((0,0,.035))
     key(card,t0+56,near,exit_quat.slerp(end_quat,.98),1)
     key(card,t0+64,end,end_quat,1)
@@ -491,9 +495,11 @@ for frame,label in [(1,'ВЪЕЗД'),(66,'ПОВОРОТ И ПРИБЛИЖЕНИ
     SCENE.timeline_markers.new(label,frame=max(1,round(frame*FPS/AUTHOR_FPS)))
 for card in CARD_ROOTS:
     card['launch_frame']=round(card['launch_frame']*FPS/AUTHOR_FPS)
+    card['clear_frame']=round(card['clear_frame']*FPS/AUTHOR_FPS)
 SCENE['duration_seconds']=SECONDS
 SCENE['card_count']=len(CARD_ROOTS)
 SCENE['quality_note']='Full HD, 30 fps, 96 samples, denoising with albedo and normal passes; subtle motion blur; no depth-of-field blur.'
+SCENE['fill_pattern']='Cards spread from the centre to all four edges and corners, in expanding rings.'
 SCENE['texture_note']='Все 60 лиц карт — оригинальные PNG пользователя, скопированные без изменения байтов. Рубашки, логотип, правила и упаковка получены из SVG пользователя с текстом в контурах. Шрифты не заменялись.'
 SCENE['box_depth_note']='Глубина 24 мм предварительная, по предыдущему проекту.'
 assert len(CARD_ROOTS)==60
