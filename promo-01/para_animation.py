@@ -1,4 +1,4 @@
-"""ПАРА / первая промо-анимация. Blender 4.x, 20 секунд, 24 fps, 1920×1080.
+"""ПАРА / первая промо-анимация. Blender 4.x / 5.x, 20 секунд, 24 fps, 1920×1080.
 
 Вставить весь скрипт в Scripting > New > Run Script.
 Текстуры автоматически скачиваются с GitHub; повторный запуск использует кэш.
@@ -76,7 +76,7 @@ SCENE.cycles.use_adaptive_sampling=True
 SCENE.cycles.adaptive_min_samples=4
 SCENE.cycles.adaptive_threshold=.03
 SCENE.cycles.use_denoising=False
-SCENE.cycles.max_bounces=2
+SCENE.cycles.max_bounces=1
 SCENE.cycles.transparent_max_bounces=64
 SCENE.render.use_persistent_data=True
 SCENE.render.use_motion_blur=True
@@ -86,6 +86,9 @@ SCENE.view_settings.look='None'
 SCENE.render.image_settings.color_mode='RGB'
 SCENE.render.film_transparent=False
 SCENE.render.fps_base=1
+# Blender 5 separates images and video. Select video before its file format.
+if hasattr(SCENE.render.image_settings, 'media_type'):
+    SCENE.render.image_settings.media_type='VIDEO'
 SCENE.render.image_settings.file_format='FFMPEG'
 SCENE.render.ffmpeg.format='MPEG4'
 SCENE.render.ffmpeg.codec='H264'
@@ -305,7 +308,7 @@ for f,v in [(1,0),(132,0),(144,1),(167,1),(185,0),(FINAL_FRAME,0)]:
 world=bpy.data.worlds.new('Фон — светло-голубой')
 world.use_nodes=True
 n,l=world.node_tree.nodes,world.node_tree.links;n.clear()
-ambient=n.new('ShaderNodeBackground');ambient.inputs['Color'].default_value=(1,1,1,1);ambient.inputs['Strength'].default_value=.70
+ambient=n.new('ShaderNodeBackground');ambient.inputs['Color'].default_value=(1,1,1,1);ambient.inputs['Strength'].default_value=.45
 blue_background=n.new('ShaderNodeBackground');blue_background.inputs['Color'].default_value=(*linear(BLUE),1)
 blue_background.inputs['Strength'].default_value=1
 path=n.new('ShaderNodeLightPath');mix=n.new('ShaderNodeMixShader');out=n.new('ShaderNodeOutputWorld')
@@ -431,7 +434,15 @@ for number in range(60):
 # Smooth, clamped curves prevent unwanted positional overshoot at the box mouth.
 def smooth(owner):
     if not owner.animation_data or not owner.animation_data.action:return
-    for curve in owner.animation_data.action.fcurves:
+    action=owner.animation_data.action
+    if hasattr(action, 'fcurves'):
+        curves=action.fcurves
+    else:
+        # Blender 5 stores curves in the channel bag of the assigned slot.
+        from bpy_extras.anim_utils import action_get_channelbag_for_slot
+        bag=action_get_channelbag_for_slot(action,owner.animation_data.action_slot)
+        curves=bag.fcurves if bag else ()
+    for curve in curves:
         for point in curve.keyframe_points:
             point.interpolation='CONSTANT' if curve.data_path in ('hide_render','hide_viewport') else 'BEZIER'
             point.handle_left_type=point.handle_right_type='AUTO_CLAMPED'
@@ -455,7 +466,7 @@ for screen in bpy.data.screens:
             area.spaces.active.overlay.show_overlays=False
 SCENE.frame_set(1)
 bpy.ops.file.pack_all()
-if '__file__' in globals():
+if '__file__' in globals() and Path(__file__).is_file():
     code=bpy.data.texts.new('para_animation.py')
     code.from_string(Path(__file__).read_text(encoding='utf-8'))
 if os.environ.get('PARA_SAVE_PATH'):
