@@ -1,0 +1,24 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "profile": "High 4:4:4 Predictive",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "gbrp",
+      "r_frame_rate": "30/1",
+      "nb_read_frames": "600"
+    }
+  ],
+  "format": {
+    "duration": "20.000000",
+    "size": "66553216"
+  },
+  "crf": 4,
+  "lossless": false,
+  "chroma_subsampling": false,
+  "sha256": "656177a598123720949f49918b08b56b033c75cc087e3974d0fc392ac24e8e0f",
+  "last_frame_psnr_db": 56.31
+}
