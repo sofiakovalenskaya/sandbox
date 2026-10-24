@@ -1,0 +1,39 @@
+{
+  "parameters": {
+    "card_width": 69.0,
+    "card_height": 94.0,
+    "cards_per_pack": 30,
+    "assumed_card_caliper": 0.32,
+    "box_stock": 0.4,
+    "divider_stock": 0.4,
+    "score_width": 73.0,
+    "score_height": 98.0,
+    "score_depth": 24.0,
+    "glue_flap": 12.0,
+    "tuck_tab": 12.0,
+    "pull_width": 18.0,
+    "pull_height": 14.0,
+    "slot_end_clearance": 0.4,
+    "slot_thickness_clearance": 0.6,
+    "reserved_pack_clearance": 1.0
+  },
+  "verification": {
+    "slot_center_from_lid_hinge_mm": 12.0,
+    "slot_size_mm": [
+      18.8,
+      1.0
+    ],
+    "divider_body_mm": [
+      69.0,
+      94.0
+    ],
+    "pull_tab_mm": [
+      18.0,
+      14.0
+    ],
+    "nominal_visible_tab_mm": 10.0,
+    "provisional_max_60_card_stack_mm": 21.8,
+    "actual_stack_thickness_verified": false,
+    "original_reference_contour_visible": false
+  }
+}
