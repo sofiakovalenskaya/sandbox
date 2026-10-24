@@ -1,8 +1,8 @@
-"""ПАРА / первая промо-анимация. Blender 4.x / 5.x, 20 секунд, 24 fps, 1920×1080.
+"""ПАРА / первая промо-анимация. Blender 4.x / 5.x, 20 секунд, 30 fps, 1920×1080.
 
 Вставить весь скрипт в Scripting > New > Run Script.
 Текстуры автоматически скачиваются с GitHub; повторный запуск использует кэш.
-Пробел — просмотр таймлайна, Numpad 0 — камера.
+Shift+← — начало; Пробел — просмотр таймлайна, Numpad 0 — камера.
 Сначала сохранить .blend (Ctrl+S), затем Ctrl+F12 — рендер видео рядом с проектом.
 Исходные сцены пользователя не удаляются: создаётся отдельная новая сцена.
 """
@@ -20,8 +20,10 @@ from mathutils import Vector, Matrix, Euler, Quaternion
 
 ASSET_URL = 'https://raw.githubusercontent.com/sofiakovalenskaya/sandbox/refs/heads/para-promo-01/promo-01/para-original-assets-v2.zip'
 ASSET_SHA256 = '07012cd8251a9d91beef5413a8a4b6befef59464f9812ef065a369f573f7d09a'
-FPS, SECONDS = 24, 20
-FINAL_FRAME = FPS * SECONDS
+FPS, SECONDS = 30, 20
+# Motion is authored at 24 fps and retimed together, including camera and flaps.
+AUTHOR_FPS=24
+FINAL_FRAME = AUTHOR_FPS * SECONDS
 WIDTH, HEIGHT = 1920, 1080
 PINK, CREAM, BLUE = '#FF0056', '#FFF0D5', '#BDF9FD'
 W, H, D = 1.46, 1.96, .48
@@ -66,21 +68,25 @@ manifest=json.loads((ASSETS/'manifest.json').read_text(encoding='utf-8'))
 PINK=manifest['palette']['pink'];CREAM=manifest['palette']['cream'];BLUE=manifest['palette']['blue']
 SCENE = bpy.data.scenes.new('ПАРА — проморолик 01 / оригиналы')
 bpy.context.window.scene=SCENE
-SCENE.frame_start,SCENE.frame_end=1,FINAL_FRAME
+SCENE.frame_start,SCENE.frame_end=1,FPS*SECONDS
 SCENE.render.fps=FPS
 SCENE.render.resolution_x,SCENE.render.resolution_y=WIDTH,HEIGHT
 SCENE.render.resolution_percentage=100
 SCENE.render.engine='CYCLES'
-SCENE.cycles.samples=16
+SCENE.cycles.samples=96
 SCENE.cycles.use_adaptive_sampling=True
-SCENE.cycles.adaptive_min_samples=4
-SCENE.cycles.adaptive_threshold=.03
-SCENE.cycles.use_denoising=False
+SCENE.cycles.adaptive_min_samples=16
+SCENE.cycles.adaptive_threshold=.012
+SCENE.cycles.use_denoising=True
+SCENE.cycles.denoising_input_passes='RGB_ALBEDO_NORMAL'
+SCENE.cycles.preview_samples=32
 SCENE.cycles.max_bounces=1
 SCENE.cycles.transparent_max_bounces=64
 SCENE.render.use_persistent_data=True
 SCENE.render.use_motion_blur=True
-SCENE.render.motion_blur_shutter=.25
+SCENE.render.motion_blur_shutter=.08
+SCENE.render.filter_size=1.0
+SCENE.render.dither_intensity=0
 SCENE.view_settings.view_transform='Standard'
 SCENE.view_settings.look='None'
 SCENE.render.image_settings.color_mode='RGB'
@@ -92,7 +98,7 @@ if hasattr(SCENE.render.image_settings, 'media_type'):
 SCENE.render.image_settings.file_format='FFMPEG'
 SCENE.render.ffmpeg.format='MPEG4'
 SCENE.render.ffmpeg.codec='H264'
-SCENE.render.ffmpeg.constant_rate_factor='HIGH'
+SCENE.render.ffmpeg.constant_rate_factor='PERC_LOSSLESS'
 SCENE.render.ffmpeg.ffmpeg_preset='GOOD'
 SCENE.render.filepath='//PARA_Promo_01.mp4'
 
@@ -325,6 +331,7 @@ TARGET=Vector((0,0,1.4))
 CAMERA.rotation_euler=(TARGET-CAMERA.location).to_track_quat('-Z','Y').to_euler()
 camera_data.type='PERSP'
 camera_data.sensor_width=36
+camera_data.dof.use_dof=False
 SCENE.camera=CAMERA
 for f,s in [(1,8.2),(66,8.2),(132,7.2),(146,7.2),(200,9.6),
             (392,9.6),(460,7.7),(476,7.2),(FINAL_FRAME,7.2)]:
@@ -374,7 +381,22 @@ AVAILABLE=set(manifest['font_faces_available'])
 card_outline=rounded(CW,CH)
 launch_order=[n for i in range(30) for n in (i,30+i)]
 rank={card_id:i for i,card_id in enumerate(launch_order)}
-cells=[(c,r) for r in range(6) for c in range(10)];random.shuffle(cells)
+# Balance each wave on both sides; fill the upper area before the lower area.
+left_cells=[];right_cells=[]
+for row in reversed(range(6)):
+    left_row=[(c,row) for c in range(5)]
+    right_row=[(c,row) for c in range(5,10)]
+    random.shuffle(left_row);random.shuffle(right_row)
+    left_cells.extend(left_row);right_cells.extend(right_row)
+cells={}
+for launch_rank,card_id in enumerate(launch_order):
+    to_left=launch_rank%4 in (0,3)
+    cells[card_id]=(left_cells if to_left else right_cells).pop(0)
+odd=list(range(1,31,2));even=list(range(2,31,2))
+face_up={
+    'font':set(random.sample(odd,8)+random.sample(even,7)),
+    'task':set(random.sample(even,7)+random.sample(odd,8)),
+}
 CARD_ROOTS=[]
 for number in range(60):
     is_font=number<30;ident=number+1 if is_font else number-29
@@ -408,13 +430,20 @@ for number in range(60):
     col,row=cells[number]
     xx=-3.65+col*(7.30/9)+random.uniform(-.10,.10)
     yy=-2.13+row*(4.26/5)+random.uniform(-.10,.10)
-    front_visible=(is_font and ident%2==1) or (not is_font and ident%2==0)
+    front_visible=ident in face_up['font' if is_font else 'task']
+    card['final_face_up']=front_visible
     depth=(1.50+number*.012) if front_visible else (.75+number*.009)
     endpoint=TARGET+RIGHT*xx+PLANE_UP*yy+PLANE_NORMAL*depth
     end=local_point(endpoint)
-    roll=random.uniform(-.22,.22)
+    side_sign=-1 if col<5 else 1
+    roll=side_sign*math.radians(random.uniform(12,25))
+    card['tilt_degrees']=math.degrees(roll)
+    card['flight_side']='left' if side_sign<0 else 'right'
     flip=0 if front_visible else math.pi
-    end_matrix=root_inverse@final_plane@Matrix.Rotation(roll,3,'Y')@Matrix.Rotation(flip,3,'Z')
+    pitch=math.radians(random.uniform(-7,7))
+    yaw=math.radians(random.uniform(-9,9))
+    end_matrix=(root_inverse@final_plane@Matrix.Rotation(roll,3,'Y')@
+                Matrix.Rotation(flip,3,'Z'))
     end_quat=end_matrix.to_quaternion()
     initial_rotation=Quaternion((1,0,0,0))
     if initial_rotation.dot(end_quat)<0:end_quat.negate()
@@ -423,10 +452,14 @@ for number in range(60):
     exit_position=Vector((0,y,1.98))
     exit_quat=Euler((-.07,0,0),'XYZ').to_quaternion()
     key(card,t0+16,exit_position,exit_quat,1)
-    mid=exit_position.lerp(end,.48)+Vector((0,-.12,.18))
-    key(card,t0+32,mid,exit_quat.slerp(end_quat,.52),1)
-    near=end+Vector((0,0,.08))
-    key(card,t0+52,near,exit_quat.slerp(end_quat,.94),1)
+    # The entire card clears the opening before it tilts left or right.
+    fan=exit_position.lerp(end,.24)+Vector((side_sign*.22,-.16,.26))
+    fan_rotation=exit_quat.slerp(end_quat,.38)@Euler((pitch,0,yaw),'XYZ').to_quaternion()
+    key(card,t0+28,fan,fan_rotation,1)
+    mid=exit_position.lerp(end,.74)+Vector((side_sign*.10,-.08,.18))
+    key(card,t0+44,mid,exit_quat.slerp(end_quat,.82),1)
+    near=end+Vector((0,0,.035))
+    key(card,t0+56,near,exit_quat.slerp(end_quat,.98),1)
     key(card,t0+64,end,end_quat,1)
     drift=local_point(endpoint+RIGHT*random.uniform(-.025,.025)+PLANE_UP*random.uniform(-.025,.025))
     key(card,FINAL_FRAME,drift,end_quat,1)
@@ -444,16 +477,23 @@ def smooth(owner):
         curves=bag.fcurves if bag else ()
     for curve in curves:
         for point in curve.keyframe_points:
+            point.co.x*=FPS/AUTHOR_FPS
+            point.handle_left.x*=FPS/AUTHOR_FPS
+            point.handle_right.x*=FPS/AUTHOR_FPS
             point.interpolation='CONSTANT' if curve.data_path in ('hide_render','hide_viewport') else 'BEZIER'
             point.handle_left_type=point.handle_right_type='AUTO_CLAMPED'
+        curve.update()
 for ob in SCENE.objects:smooth(ob)
 smooth(camera_data)
 smooth(index.data.shape_keys)
 for frame,label in [(1,'ВЪЕЗД'),(66,'ПОВОРОТ И ПРИБЛИЖЕНИЕ'),(133,'ОТКРЫТИЕ'),
                     (176,'ПОСЛЕДОВАТЕЛЬНЫЙ ВЫЛЕТ'),(320,'КАРТЫ ЗАПОЛНЯЮТ КАДР'),(476,'ФИНАЛ')]:
-    SCENE.timeline_markers.new(label,frame=frame)
+    SCENE.timeline_markers.new(label,frame=max(1,round(frame*FPS/AUTHOR_FPS)))
+for card in CARD_ROOTS:
+    card['launch_frame']=round(card['launch_frame']*FPS/AUTHOR_FPS)
 SCENE['duration_seconds']=SECONDS
 SCENE['card_count']=len(CARD_ROOTS)
+SCENE['quality_note']='Full HD, 30 fps, 96 samples, denoising with albedo and normal passes; subtle motion blur; no depth-of-field blur.'
 SCENE['texture_note']='Все 60 лиц карт — оригинальные PNG пользователя, скопированные без изменения байтов. Рубашки, логотип, правила и упаковка получены из SVG пользователя с текстом в контурах. Шрифты не заменялись.'
 SCENE['box_depth_note']='Глубина 24 мм предварительная, по предыдущему проекту.'
 assert len(CARD_ROOTS)==60
@@ -464,11 +504,11 @@ for screen in bpy.data.screens:
             area.spaces.active.shading.type='MATERIAL'
             area.spaces.active.shading.use_scene_world=True
             area.spaces.active.overlay.show_overlays=False
-SCENE.frame_set(1)
+SCENE.frame_set(round(132*FPS/AUTHOR_FPS))
 bpy.ops.file.pack_all()
 if '__file__' in globals() and Path(__file__).is_file():
     code=bpy.data.texts.new('para_animation.py')
     code.from_string(Path(__file__).read_text(encoding='utf-8'))
 if os.environ.get('PARA_SAVE_PATH'):
     bpy.ops.wm.save_as_mainfile(filepath=os.environ['PARA_SAVE_PATH'])
-print('ПАРА: сцена готова — 60 объёмных карт, 20 секунд, 24 fps. Пробел — просмотр; Ctrl+F12 — видео.')
+print('ПАРА: сцена готова — 60 объёмных карт, 20 секунд, 30 fps. Пробел — просмотр; Ctrl+F12 — видео.')
