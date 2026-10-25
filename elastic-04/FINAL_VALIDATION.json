@@ -1,0 +1,98 @@
+{
+  "files": [
+    {
+      "file": "PARA_Elastic.mp4",
+      "sha256": "7f905a172529dbf6d37674e7fcca2658acebad1c0722a8e165f3632b00877b54",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 1440,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "288"
+          }
+        ],
+        "format": {
+          "duration": "4.800000",
+          "size": "4951425"
+        }
+      }
+    },
+    {
+      "file": "PARA_Elastic_RGB.mp4",
+      "sha256": "9384cd69b34df0e6a15c0b3a0fb3ba16a16e114582bf4cef0ab4d4ca3f8080f4",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 1440,
+            "pix_fmt": "gbrp",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "288"
+          }
+        ],
+        "format": {
+          "duration": "4.800000",
+          "size": "17737206"
+        }
+      }
+    },
+    {
+      "file": "PARA_Elastic_16x9.mp4",
+      "sha256": "b71f9539729e16d15754c0419ccbc28c6572f52a0919c30ae4ca73712183735c",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "288"
+          }
+        ],
+        "format": {
+          "duration": "4.800000",
+          "size": "4851318"
+        }
+      }
+    },
+    {
+      "file": "PARA_Elastic_Original_Proportions.mp4",
+      "sha256": "bd0a36ae365284304fd0fe9b3c328edf324cce545d0da57432a6fd18573aeb8a",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 1440,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "288"
+          }
+        ],
+        "format": {
+          "duration": "4.800000",
+          "size": "4657167"
+        }
+      }
+    }
+  ],
+  "rgb_master_all_288_frames_match_render": true,
+  "background": "#BDF9FD",
+  "logo": "#FF0056",
+  "seamless_cycle": true,
+  "duration_seconds": 4.8,
+  "cycles": 2
+}

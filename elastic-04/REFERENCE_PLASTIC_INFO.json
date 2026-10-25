@@ -1,0 +1,20 @@
+{
+  "resolution": [
+    1440,
+    1440
+  ],
+  "fps": 60,
+  "frames": 288,
+  "duration_seconds": 4.8,
+  "cycles": 2,
+  "cycle_seconds": 2.4,
+  "reference_corner_motion_transferred": true,
+  "reference_axis_fit": [
+    0.9852104187011719,
+    0.981725811958313
+  ],
+  "original_vector_artwork": true,
+  "logo": "#FF0056",
+  "background": "#BDF9FD",
+  "neutral_logo_can_be_squashed_as_part_of_animation": true
+}
