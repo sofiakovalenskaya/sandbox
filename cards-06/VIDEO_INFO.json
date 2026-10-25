@@ -1,0 +1,66 @@
+{
+  "title": "ПАРА — карты по референсу",
+  "duration_seconds": 4.8,
+  "fps": 60,
+  "frames": 288,
+  "aspect_ratio": "16:9",
+  "resolution": [
+    3840,
+    2160
+  ],
+  "background": "#FF0056",
+  "source_artwork": "PARA ORIGINALS.zip",
+  "textures_verified_against_original_archive": 60,
+  "artwork_retypeset": false,
+  "lettering_reconstructed": false,
+  "motion": "Vertical pulse measured by optical flow from supplied screen recording; alternating original task and font cards, smooth 3D card rocking. Layout adapted to requested horizontal 16:9.",
+  "files": [
+    {
+      "name": "PARA_Cards_Reference_4K.mp4",
+      "sha256": "d2ec0234d3ede966f8be1a48b7f1ecbab3738e01ba6049550069c857d65f2681",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 3840,
+            "height": 2160,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "288"
+          }
+        ],
+        "format": {
+          "duration": "4.800000",
+          "size": "43692104"
+        }
+      }
+    },
+    {
+      "name": "PARA_Cards_Reference_1080p.mp4",
+      "sha256": "b9e6a84565ae0cb45cc8517763c6a505a30bab2aa58cb509a71332f3ce6e0cf2",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "288"
+          }
+        ],
+        "format": {
+          "duration": "4.800000",
+          "size": "18911578"
+        }
+      }
+    }
+  ],
+  "decoded_frames_verified": 288,
+  "maximum_decoded_frame_difference": 20.11565399169922,
+  "minimum_decoded_frame_difference": 4.8114118576049805
+}
