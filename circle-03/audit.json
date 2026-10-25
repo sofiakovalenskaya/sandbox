@@ -1,0 +1,12 @@
+{
+  "original_pngs_verified": 6,
+  "physical_cards": 6,
+  "packed_images": 7,
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "frames": 300,
+  "duration_seconds": 5,
+  "minimum_frame_margin": 0.04823923110961914,
+  "background": "#FF0056"
+}
