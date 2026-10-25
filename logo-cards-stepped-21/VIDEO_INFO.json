@@ -1,0 +1,151 @@
+{
+  "duration_seconds": 7.2,
+  "resolution": [
+    3840,
+    2160
+  ],
+  "aspect_ratio": "16:9",
+  "fps": 60,
+  "frames": 432,
+  "background": "#FFF0D5",
+  "logo": "#FF0056",
+  "source_logo": "паруля.svg",
+  "original_vector_paths": 4,
+  "original_vector_artwork_used": true,
+  "reference": "ScreenRecording_10-26-2026 00-11-25_1.mov",
+  "motion_measured_from_reference": true,
+  "reference_repeat_seconds": 0.4,
+  "reference_distinct_poses": 4,
+  "reference_motion_adapted_to_four_original_logo_letters": true,
+  "lettering_recreated": false,
+  "logo_motion": "The exact four original held poses; 9-frame holds instead of 6, no interpolation, no amplitude change",
+  "output_repeat_seconds": 0.6,
+  "cadence_audit": {
+    "original_pose_count": 4,
+    "output_pose_count": 4,
+    "original_pose_hold_frames": 6,
+    "new_pose_hold_frames": 9,
+    "fps": 60,
+    "original_cycle_seconds": 0.4,
+    "new_cycle_seconds": 0.6,
+    "speed_ratio": 0.6666666666666666,
+    "amplitude_ratio": 1,
+    "interpolation": false,
+    "pixel_crossfade": false,
+    "card_motion_unchanged": true
+  },
+  "card_motion_unchanged": true,
+  "cards": [
+    "Inter, cream front and cream back",
+    "Task 04, pale aqua front and pale aqua back"
+  ],
+  "double_sided_cards": true,
+  "rounded_front_and_back_corners": true,
+  "soft_shadows": true,
+  "actual_perspective_and_depth_buffer": true,
+  "motion_audit": {
+    "front_visible_frames": [
+      144,
+      140
+    ],
+    "back_visible_frames": [
+      107,
+      106
+    ],
+    "looking_at_logo_normal_dot": [
+      3.2320071935548826,
+      3.240422171822299
+    ],
+    "crossing_points": [
+      {
+        "time": 5.397654753084309,
+        "position": [
+          2.886579864025407e-15,
+          6.661338147750939e-16,
+          2.6279999999999997
+        ]
+      },
+      {
+        "time": 5.477654753084309,
+        "position": [
+          -2.886579864025407e-15,
+          -6.661338147750939e-16,
+          0.4391999999999999
+        ]
+      }
+    ],
+    "no_card_volume_intersection": true,
+    "physical_thickness": 0.018,
+    "fully_double_sided": true,
+    "exit_corners": [
+      "upper right",
+      "lower left"
+    ],
+    "card_corners_rounded": true
+  },
+  "all_final_frames_decoded": true,
+  "minimum_logo_ink_at_960px": 24558,
+  "maximum_mean_frame_difference": 11.057530403137207,
+  "exact_render_loop": true,
+  "audio": false,
+  "probes": [
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "432"
+        }
+      ],
+      "format": {
+        "duration": "7.200000",
+        "size": "7165684"
+      }
+    },
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "432"
+        }
+      ],
+      "format": {
+        "duration": "7.200000",
+        "size": "2868847"
+      }
+    }
+  ],
+  "files": [
+    {
+      "name": "PARA_Logo_Cards_Stepped_Slower_4K60.mp4",
+      "bytes": 7165684,
+      "sha256": "cfa77cb4992b7c2cddd0b5ca20328691484b3f85fcf061db6f75879ecc0bbb9d"
+    },
+    {
+      "name": "PARA_Logo_Cards_Stepped_Slower_1080p60.mp4",
+      "bytes": 2868847,
+      "sha256": "99ed7807e026d64773b2aef066e994f88df2e16bf74cf17a901b22c696795280"
+    },
+    {
+      "name": "PARA_Logo_Cards_Poster.jpg",
+      "bytes": 486972,
+      "sha256": "7b1e0e9fb570e83475e60ffaf805f74888c118d4d75eaf41cb8734aec175540a"
+    },
+    {
+      "name": "PARA_Logo_Cards_Storyboard.jpg",
+      "bytes": 661503,
+      "sha256": "8a27b48424d79570fef659f80f3c278e27eda6747c7c376cb629c25b0c62fe7c"
+    }
+  ]
+}

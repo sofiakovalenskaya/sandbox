@@ -1,0 +1,14 @@
+{
+  "original_pose_count": 4,
+  "output_pose_count": 4,
+  "original_pose_hold_frames": 6,
+  "new_pose_hold_frames": 9,
+  "fps": 60,
+  "original_cycle_seconds": 0.4,
+  "new_cycle_seconds": 0.6,
+  "speed_ratio": 0.6666666666666666,
+  "amplitude_ratio": 1,
+  "interpolation": false,
+  "pixel_crossfade": false,
+  "card_motion_unchanged": true
+}
