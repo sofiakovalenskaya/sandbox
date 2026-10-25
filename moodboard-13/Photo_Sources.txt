@@ -1,0 +1,34 @@
+ПАРА / мудборд 2:1
+Источники фотографических референсов
+
+Материалы проекта (карты, логотип, упаковка и мокапы) не использованы.
+Фотографии взяты из перечисленных открытых репозиториев и тонированы в палитру мудборда.
+Цвета: кремовый #FFF0D5, розовый #FF0056, голубой #BDF9FD.
+Клетка, круги и типографические композиции созданы заново в векторе.
+
+SVG содержит встроенные растровые фотографии; надписи переведены в кривые.
+PNG: 4800 × 2400 px. Исходные размеры фотографий указаны ниже.
+
+Печатная типографика и предметный дизайн
+https://raw.githubusercontent.com/StartBootstrap/startbootstrap-creative/master/dist/assets/img/portfolio/fullsize/1.jpg
+Исходный размер: 650 × 350 px
+
+Цветная бумага и карандаш: тактильность и творческий процесс
+https://raw.githubusercontent.com/StartBootstrap/startbootstrap-stylish-portfolio/master/dist/assets/img/portfolio-1.jpg
+Исходный размер: 700 × 467 px
+
+Карандаш и миниатюрное мороженое: юмор и игра
+https://raw.githubusercontent.com/StartBootstrap/startbootstrap-stylish-portfolio/master/dist/assets/img/portfolio-2.jpg
+Исходный размер: 700 × 467 px
+
+Книга с выразительной типографикой
+https://raw.githubusercontent.com/StartBootstrap/startbootstrap-creative/master/dist/assets/img/portfolio/fullsize/2.jpg
+Исходный размер: 650 × 350 px
+
+Коллекция настольных игр в игровом кафе Sip N Play
+https://raw.githubusercontent.com/YNemokun/BoardGameCafeRevamp/main/images/imageref1.jpeg
+Исходный размер: 1024 × 768 px
+
+Бумага, ножницы и карандаши: проектирование и эксперимент
+https://raw.githubusercontent.com/StartBootstrap/startbootstrap-stylish-portfolio/master/dist/assets/img/bg-callout.jpg
+Исходный размер: 1900 × 1268 px

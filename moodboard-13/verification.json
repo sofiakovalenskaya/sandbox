@@ -1,0 +1,18 @@
+{
+  "dimensions": [
+    4800,
+    2400
+  ],
+  "aspect_ratio": "2:1",
+  "embedded_photos": 6,
+  "live_text_nodes": 0,
+  "external_image_references": 0,
+  "vector_colors": [
+    "#BDF9FD",
+    "#FF0056",
+    "#FFF0D5"
+  ],
+  "photos_are_external_references": true,
+  "project_artwork_used": false,
+  "checkerboard_is_native_vector": true
+}
