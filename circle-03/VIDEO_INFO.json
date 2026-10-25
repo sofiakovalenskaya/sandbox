@@ -1,0 +1,59 @@
+{
+  "duration_seconds": 5,
+  "fps": 60,
+  "frames": 300,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "true_3d_render": true,
+  "original_cards": 6,
+  "background": "#FF0056",
+  "rgb_master_pixels_match_all_rendered_frames": true,
+  "files": [
+    {
+      "name": "PARA_Circle_03.mp4",
+      "sha256": "4818319e0f90bd4430909eb19f6d9590b6dd10e3ab51e8d5a5bcdbfea91a4ba3",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "300"
+          }
+        ],
+        "format": {
+          "duration": "5.000000",
+          "size": "2888440"
+        }
+      }
+    },
+    {
+      "name": "PARA_Circle_03_RGB.mp4",
+      "sha256": "635e10095994f404100acb05f768551ebb7e08c34b67cadeb41f275cece8403b",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "gbrp",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "300"
+          }
+        ],
+        "format": {
+          "duration": "5.000000",
+          "size": "20723199"
+        }
+      }
+    }
+  ]
+}
