@@ -1,0 +1,85 @@
+{
+  "duration_seconds": 3.5,
+  "fps": 60,
+  "frames": 210,
+  "resolution": [
+    3840,
+    2160
+  ],
+  "aspect_ratio": "16:9",
+  "background": "#FF0056",
+  "artwork": "Original uploaded font and task PNG files",
+  "artwork_retyped": false,
+  "diagonal_degrees": -18,
+  "alternation": "Adjacent diagonal rows alternate font cards and task cards",
+  "font_motion_pixels_per_second": [
+    315.2073025435366,
+    -102.41706099283971
+  ],
+  "task_motion_pixels_per_second": [
+    -315.2073025435366,
+    102.41706099283971
+  ],
+  "motion": "constant-speed opposing marquee streams",
+  "soft_shadows": true,
+  "frame_filled_from_start": true,
+  "exact_render_loop": true,
+  "all_210_final_frames_decoded": true,
+  "minimum_frame_difference": 10.177450180053711,
+  "maximum_frame_difference": 10.37832260131836,
+  "probes": [
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "210"
+        }
+      ],
+      "format": {
+        "duration": "3.500000",
+        "size": "31140547"
+      }
+    },
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "210"
+        }
+      ],
+      "format": {
+        "duration": "3.500000",
+        "size": "14753237"
+      }
+    }
+  ],
+  "files": [
+    {
+      "name": "PARA_Diagonal_Marquee_Pink_4K60.mp4",
+      "bytes": 31140547,
+      "sha256": "946542123c5321794fdc0d5f872c09e6a35f240c22d8dcbf0c436ebfe6c31e67"
+    },
+    {
+      "name": "PARA_Diagonal_Marquee_Pink_1080p60.mp4",
+      "bytes": 14753237,
+      "sha256": "efb30d07d0c75e84d646b24ab8fccfc725f8e2db83c3bca773d8293334d45592"
+    },
+    {
+      "name": "PARA_Diagonal_Poster.jpg",
+      "bytes": 1946468,
+      "sha256": "f0e4cd56262fbd5b60321765563d242021de7a1d7180a50b94c5a9bcd5795f11"
+    }
+  ]
+}
