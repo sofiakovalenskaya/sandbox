@@ -1,0 +1,11 @@
+{
+  "previous_cycle_seconds": 0.4,
+  "new_cycle_seconds": 0.6,
+  "speed_ratio": 0.6666666666666666,
+  "amplitude_ratio": 0.9,
+  "geometric_interpolation": "periodic Catmull-Rom of original affine letter parameters",
+  "pixel_crossfade": false,
+  "previous_peak_parameter_step": 0.3201151302309399,
+  "new_peak_parameter_step": 0.0412102892251464,
+  "peak_step_ratio": 0.1287358369953215
+}

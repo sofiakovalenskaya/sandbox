@@ -1,0 +1,155 @@
+{
+  "duration_seconds": 7.2,
+  "resolution": [
+    3840,
+    2160
+  ],
+  "aspect_ratio": "16:9",
+  "fps": 60,
+  "frames": 432,
+  "background": "#FFF0D5",
+  "logo": "#FF0056",
+  "source_logo": "паруля.svg",
+  "original_vector_paths": 4,
+  "original_vector_artwork_used": true,
+  "reference": "ScreenRecording_10-26-2026 00-11-25_1.mov",
+  "motion_measured_from_reference": true,
+  "reference_repeat_seconds": 0.4,
+  "reference_distinct_poses": 4,
+  "reference_motion_adapted_to_four_original_logo_letters": true,
+  "lettering_recreated": false,
+  "logo_motion": "Measured reference poses, continuous geometric Catmull-Rom interpolation at 60 fps, 0.6s cycle, 90 percent original amplitude",
+  "output_repeat_seconds": 0.6,
+  "smoothing_audit": {
+    "previous_cycle_seconds": 0.4,
+    "new_cycle_seconds": 0.6,
+    "speed_ratio": 0.6666666666666666,
+    "amplitude_ratio": 0.9,
+    "geometric_interpolation": "periodic Catmull-Rom of original affine letter parameters",
+    "pixel_crossfade": false,
+    "previous_peak_parameter_step": 0.3201151302309399,
+    "new_peak_parameter_step": 0.0412102892251464,
+    "peak_step_ratio": 0.1287358369953215
+  },
+  "decoded_motion_comparison": {
+    "previous_logo_peak_frame_change": 8.481429100036621,
+    "new_logo_peak_frame_change": 1.981175422668457,
+    "peak_ratio": 0.23358981125715036,
+    "interval_seconds": 1.8,
+    "measurement": "Mean decoded pixel change between adjacent frames at 960 x 540, logo-only interval"
+  },
+  "card_motion_unchanged": true,
+  "cards": [
+    "Inter, cream front and cream back",
+    "Task 04, pale aqua front and pale aqua back"
+  ],
+  "double_sided_cards": true,
+  "rounded_front_and_back_corners": true,
+  "soft_shadows": true,
+  "actual_perspective_and_depth_buffer": true,
+  "motion_audit": {
+    "front_visible_frames": [
+      144,
+      140
+    ],
+    "back_visible_frames": [
+      107,
+      106
+    ],
+    "looking_at_logo_normal_dot": [
+      3.2320071935548826,
+      3.240422171822299
+    ],
+    "crossing_points": [
+      {
+        "time": 5.397654753084309,
+        "position": [
+          2.886579864025407e-15,
+          6.661338147750939e-16,
+          2.6279999999999997
+        ]
+      },
+      {
+        "time": 5.477654753084309,
+        "position": [
+          -2.886579864025407e-15,
+          -6.661338147750939e-16,
+          0.4391999999999999
+        ]
+      }
+    ],
+    "no_card_volume_intersection": true,
+    "physical_thickness": 0.018,
+    "fully_double_sided": true,
+    "exit_corners": [
+      "upper right",
+      "lower left"
+    ],
+    "card_corners_rounded": true
+  },
+  "all_final_frames_decoded": true,
+  "minimum_logo_ink_at_960px": 25031,
+  "maximum_mean_frame_difference": 7.071104049682617,
+  "exact_render_loop": true,
+  "audio": false,
+  "probes": [
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "432"
+        }
+      ],
+      "format": {
+        "duration": "7.200000",
+        "size": "12035495"
+      }
+    },
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "432"
+        }
+      ],
+      "format": {
+        "duration": "7.200000",
+        "size": "4884122"
+      }
+    }
+  ],
+  "files": [
+    {
+      "name": "PARA_Logo_Cards_Smooth_4K60.mp4",
+      "bytes": 12035495,
+      "sha256": "70fa38543453754aa8e918ed0fde78b13383240e495a2ebbe2fe831b99a89501"
+    },
+    {
+      "name": "PARA_Logo_Cards_Smooth_1080p60.mp4",
+      "bytes": 4884122,
+      "sha256": "c2fa9b2aa1727bf7c16b6964c44fdae1b72c61abc74fcd3af041508116693643"
+    },
+    {
+      "name": "PARA_Logo_Cards_Poster.jpg",
+      "bytes": 489869,
+      "sha256": "4026ebe1cd534e66a91793b51f15d0afbb65b3184235d2321835fad302d7d972"
+    },
+    {
+      "name": "PARA_Logo_Cards_Storyboard.jpg",
+      "bytes": 666398,
+      "sha256": "a570b7e14da5cf7df5fd26b217d142a468685d0988d074318212dec8259b5c21"
+    }
+  ]
+}

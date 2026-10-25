@@ -1,0 +1,7 @@
+{
+  "previous_logo_peak_frame_change": 8.481429100036621,
+  "new_logo_peak_frame_change": 1.981175422668457,
+  "peak_ratio": 0.23358981125715036,
+  "interval_seconds": 1.8,
+  "measurement": "Mean decoded pixel change between adjacent frames at 960 x 540, logo-only interval"
+}
