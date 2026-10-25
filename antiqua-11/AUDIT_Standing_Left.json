@@ -1,0 +1,32 @@
+{
+  "original_sha256": "039dc5e63a0ea61535d5ebd5a42fc9f1f86bed34731c34dd21387fdac7758458",
+  "source_vector_paths_preserved": 8,
+  "background": "transparent",
+  "projection": "3D orthographic, upright card with a slight left lean",
+  "angles_degrees": [
+    8,
+    -14,
+    12
+  ],
+  "soft_shadows": true,
+  "whole_card": true,
+  "print_recreated": false,
+  "canvas_viewbox": [
+    -456.1943631005712,
+    -524.41818511601,
+    912.6113597238195,
+    1047.4395304843786
+  ],
+  "png_size": [
+    3485,
+    4000
+  ],
+  "visible_bounds": [
+    340,
+    381,
+    3247,
+    3805
+  ],
+  "transparent_corners": true,
+  "sha256": "3c8d581c9fe7634f776929d85c4d50e5d24de9185d73f209bd7f5e2452b58eaf"
+}
