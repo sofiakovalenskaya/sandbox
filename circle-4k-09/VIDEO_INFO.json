@@ -1,0 +1,66 @@
+{
+  "source_upload_sha256": "4818319e0f90bd4430909eb19f6d9590b6dd10e3ab51e8d5a5bcdbfea91a4ba3",
+  "source_scene": "PARA_Circle_03.blend",
+  "native_3d_rerender": true,
+  "video_upscaled": false,
+  "motion_interpolated": false,
+  "original_motion_and_camera_preserved": true,
+  "original_printed_textures_preserved": true,
+  "duration_seconds": 5,
+  "fps": 60,
+  "frames": 300,
+  "resolution": [
+    3840,
+    2160
+  ],
+  "render_samples": 8,
+  "background": "#FF0056",
+  "render_border_optimization": "Empty background skipped at integer pixel boundaries, composited 1:1 without scaling.",
+  "rgb_master_all_300_frames_pixel_exact_to_native_renders": true,
+  "files": [
+    {
+      "name": "PARA_Promo_Third_4K60.mp4",
+      "sha256": "899cd69590a4ea0f9316674cd14e24a07bd815c278b445305905cb84cda6ea68",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 3840,
+            "height": 2160,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "300"
+          }
+        ],
+        "format": {
+          "duration": "5.000000",
+          "size": "8106884"
+        }
+      }
+    },
+    {
+      "name": "PARA_Promo_Third_4K60_RGB_Master.mp4",
+      "sha256": "993def2dc2cf68bc775fae655345a2d7406d835af4b1ca16fa404fcc9fb92b5e",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 3840,
+            "height": 2160,
+            "pix_fmt": "gbrp",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "300"
+          }
+        ],
+        "format": {
+          "duration": "5.000000",
+          "size": "52583458"
+        }
+      }
+    }
+  ]
+}
