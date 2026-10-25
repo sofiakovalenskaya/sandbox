@@ -1,0 +1,40 @@
+{
+  "front_visible_frames": [
+    144,
+    140
+  ],
+  "back_visible_frames": [
+    107,
+    106
+  ],
+  "looking_at_logo_normal_dot": [
+    3.2320071935548826,
+    3.240422171822299
+  ],
+  "crossing_points": [
+    {
+      "time": 5.397654753084309,
+      "position": [
+        2.886579864025407e-15,
+        6.661338147750939e-16,
+        2.6279999999999997
+      ]
+    },
+    {
+      "time": 5.477654753084309,
+      "position": [
+        -2.886579864025407e-15,
+        -6.661338147750939e-16,
+        0.4391999999999999
+      ]
+    }
+  ],
+  "no_card_volume_intersection": true,
+  "physical_thickness": 0.018,
+  "fully_double_sided": true,
+  "exit_corners": [
+    "upper right",
+    "lower left"
+  ],
+  "card_corners_rounded": true
+}

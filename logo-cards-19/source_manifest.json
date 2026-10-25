@@ -1,0 +1,32 @@
+[
+  {
+    "file": "паруля.svg",
+    "sha256": "a052795f83bafe2464d68a807cf17cb3c96a06f6f6171240afedc351e322e6e8",
+    "vector_paths": 4,
+    "original_vector_contours_preserved": true
+  },
+  {
+    "file": "font-front.png",
+    "original_sha256": "3da46114b08ae5bc8f78cc1b321a158ffc48f6b75854000052bb464f7c2c5e1f",
+    "rounded_silhouette": true,
+    "artwork_retyped": false
+  },
+  {
+    "file": "font-back.png",
+    "original_sha256": "5734c84688b6821f23fe9a7c70c503136aea36087f58735ae446512a596fe55d",
+    "rounded_silhouette": true,
+    "artwork_retyped": false
+  },
+  {
+    "file": "task-front.png",
+    "original_sha256": "fff28bad4468f01a47f6b23ae56e64494d3b097359012f1168e008bb6fc03186",
+    "rounded_silhouette": true,
+    "artwork_retyped": false
+  },
+  {
+    "file": "task-back.png",
+    "original_sha256": "a4dce7576f13bb82a8da6cd9013316115d0103d741b6e889ee21dd44cc6460aa",
+    "rounded_silhouette": true,
+    "artwork_retyped": false
+  }
+]
