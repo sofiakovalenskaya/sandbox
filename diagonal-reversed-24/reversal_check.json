@@ -1,0 +1,10 @@
+{
+  "uploaded_file_matches_original": true,
+  "first_frame_unchanged": true,
+  "reverse_direction_render_exact_match_times": [
+    0.25,
+    0.75,
+    1.5
+  ],
+  "original_design_preserved": true
+}
