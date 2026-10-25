@@ -1,0 +1,135 @@
+{
+  "duration_seconds": 7.2,
+  "resolution": [
+    3840,
+    2160
+  ],
+  "aspect_ratio": "16:9",
+  "fps": 60,
+  "frames": 432,
+  "background": "#FFF0D5",
+  "logo": "#FF0056",
+  "source_logo": "паруля.svg",
+  "original_vector_paths": 4,
+  "original_vector_artwork_used": true,
+  "reference": "ScreenRecording_10-26-2026 00-11-25_1.mov",
+  "motion_measured_from_reference": false,
+  "output_repeat_seconds": 1.8,
+  "unique_logo_poses_per_cycle": 108,
+  "lettering_recreated": false,
+  "logo_motion": "Gentle independent rigid rocking, 2.2 to 2.5 degrees, phase offsets, subtle float, no stretching, no frame holds",
+  "card_motion_unchanged": true,
+  "cards": [
+    "Inter, cream front and cream back",
+    "Task 04, pale aqua front and pale aqua back"
+  ],
+  "double_sided_cards": true,
+  "rounded_front_and_back_corners": true,
+  "soft_shadows": true,
+  "actual_perspective_and_depth_buffer": true,
+  "motion_audit": {
+    "front_visible_frames": [
+      144,
+      140
+    ],
+    "back_visible_frames": [
+      107,
+      106
+    ],
+    "looking_at_logo_normal_dot": [
+      3.2320071935548826,
+      3.240422171822299
+    ],
+    "crossing_points": [
+      {
+        "time": 5.397654753084309,
+        "position": [
+          2.886579864025407e-15,
+          6.661338147750939e-16,
+          2.6279999999999997
+        ]
+      },
+      {
+        "time": 5.477654753084309,
+        "position": [
+          -2.886579864025407e-15,
+          -6.661338147750939e-16,
+          0.4391999999999999
+        ]
+      }
+    ],
+    "no_card_volume_intersection": true,
+    "physical_thickness": 0.018,
+    "fully_double_sided": true,
+    "exit_corners": [
+      "upper right",
+      "lower left"
+    ],
+    "card_corners_rounded": true
+  },
+  "all_final_frames_decoded": true,
+  "minimum_logo_ink_at_960px": 25727,
+  "maximum_mean_frame_difference": 6.019865036010742,
+  "exact_render_loop": true,
+  "audio": false,
+  "probes": [
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "432"
+        }
+      ],
+      "format": {
+        "duration": "7.200000",
+        "size": "9942313"
+      }
+    },
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "432"
+        }
+      ],
+      "format": {
+        "duration": "7.200000",
+        "size": "3386055"
+      }
+    }
+  ],
+  "files": [
+    {
+      "name": "PARA_Logo_Rocking_Faster_4K60.mp4",
+      "bytes": 9942313,
+      "sha256": "292618e53b482b76d97dd25b4d1238ddaf94314fa70cbde4a7e8d0bdb4eaa63f"
+    },
+    {
+      "name": "PARA_Logo_Rocking_Faster_1080p60.mp4",
+      "bytes": 3386055,
+      "sha256": "6619512910ee4cc2be5707ae2f2e1b2ce04f530c88ad8bb08eb8ed0eb88c7e68"
+    },
+    {
+      "name": "PARA_Logo_Cards_Poster.jpg",
+      "bytes": 493149,
+      "sha256": "85d3c105a6cf79084aba7c9dcf5f6176efae737b0520a47a3e512e0647183acf"
+    },
+    {
+      "name": "PARA_Logo_Cards_Storyboard.jpg",
+      "bytes": 664215,
+      "sha256": "ecaa7147d7b3a9bcfec804e9ebaabf23c3bdcbe7b18da33fca6103b7aa795900"
+    }
+  ]
+}
