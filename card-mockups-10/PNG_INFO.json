@@ -1,0 +1,100 @@
+{
+  "files": [
+    {
+      "name": "01_Tea.png",
+      "width": 3069,
+      "height": 4000,
+      "mode": "RGBA",
+      "transparent": true,
+      "uncropped": true,
+      "visible_bounds": [
+        297,
+        332,
+        2880,
+        3846
+      ],
+      "sha256": "be13e84da76ad59b99b3c29ca1bcafebd38b1e3b5bd19c20b4455f67fabb99b7"
+    },
+    {
+      "name": "02_Vodevile.png",
+      "width": 3931,
+      "height": 4000,
+      "mode": "RGBA",
+      "transparent": true,
+      "uncropped": true,
+      "visible_bounds": [
+        348,
+        386,
+        3708,
+        3825
+      ],
+      "sha256": "73d6abb6c0daba6b6bab85faed06ccd3ccaaed9bdb174fa773ca5f92bdfabea4"
+    },
+    {
+      "name": "03_Metro.png",
+      "width": 2995,
+      "height": 4000,
+      "mode": "RGBA",
+      "transparent": true,
+      "uncropped": true,
+      "visible_bounds": [
+        298,
+        333,
+        2805,
+        3845
+      ],
+      "sha256": "c07b2e4907e6e2e77deed7a88ddf3ce4c9827b1a39040b6542e11901a8b4540d"
+    },
+    {
+      "name": "04_Font_Back.png",
+      "width": 3173,
+      "height": 4000,
+      "mode": "RGBA",
+      "transparent": true,
+      "uncropped": true,
+      "visible_bounds": [
+        300,
+        339,
+        2982,
+        3845
+      ],
+      "sha256": "8b2de85dcc19e29978a230ee7723c81a5b9db4b4543b756e54f8444bb01b65f6"
+    },
+    {
+      "name": "05_Blagovest.png",
+      "width": 3040,
+      "height": 4000,
+      "mode": "RGBA",
+      "transparent": true,
+      "uncropped": true,
+      "visible_bounds": [
+        327,
+        366,
+        2833,
+        3830
+      ],
+      "sha256": "ddfe9c123a571516112b0ead557efd559afed37568a636ade03826f32439ce44"
+    },
+    {
+      "name": "06_Task_Back.png",
+      "width": 3026,
+      "height": 4000,
+      "mode": "RGBA",
+      "transparent": true,
+      "uncropped": true,
+      "visible_bounds": [
+        298,
+        337,
+        2836,
+        3846
+      ],
+      "sha256": "3184ce60c8d96fa5aa7cdbe96ee183140dc5059a63e2e573f1ffd3b38af10b6b"
+    }
+  ],
+  "format": "PNG",
+  "compression": "lossless",
+  "long_edge": 4000,
+  "original_artwork_preserved": true,
+  "background": "transparent",
+  "soft_shadows_preserved": true
+}
