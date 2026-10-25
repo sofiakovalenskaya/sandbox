@@ -1,0 +1,79 @@
+{
+  "duration_seconds": 9,
+  "fps": 60,
+  "frames": 540,
+  "resolution": [
+    3840,
+    2160
+  ],
+  "aspect_ratio": "16:9",
+  "background": "#BDF9FD",
+  "interior_color": "#FF0056",
+  "original_archive": "PARA ORIGINALS 2.zip",
+  "font": "Inter",
+  "task": "04 — студенческая кофейня",
+  "original_fronts": 2,
+  "original_backs": 2,
+  "original_box_panels": true,
+  "lettering_recreated": false,
+  "actual_3d_perspective_and_depth_buffer": true,
+  "physical_thickness_cards": 0.014,
+  "physical_thickness_carton": 0.018,
+  "rounded_corners_from_original_alpha": true,
+  "source_pngs_bytes_unchanged": true,
+  "all_frames_decoded": true,
+  "max_frame_difference": 6.613421440124512,
+  "minimum_card_margin_fraction": 0.0329211194,
+  "back_visible_frames": [
+    30,
+    30
+  ],
+  "both_cards_fit_opening": true,
+  "no_premature_wall_intersection": true,
+  "files": [
+    {
+      "name": "PARA_Duet_4K.mp4",
+      "sha256": "fe5ed3f15d00368b643efd0e75adb5c3e561a0079c8913a5900c328dffeb4d75",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 3840,
+            "height": 2160,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "540"
+          }
+        ],
+        "format": {
+          "duration": "9.000000",
+          "size": "15136583"
+        }
+      }
+    },
+    {
+      "name": "PARA_Duet_1080p.mp4",
+      "sha256": "13ce63e2558d6726f2c52a8b0a8044a98de85a9f061a4c1342769b6dba704134",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "540"
+          }
+        ],
+        "format": {
+          "duration": "9.000000",
+          "size": "5749323"
+        }
+      }
+    }
+  ]
+}
