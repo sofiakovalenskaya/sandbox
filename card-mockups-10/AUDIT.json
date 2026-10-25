@@ -1,0 +1,65 @@
+{
+  "canvas": [
+    4200,
+    3100
+  ],
+  "background": "transparent",
+  "cards": 6,
+  "original_pngs_embedded_byte_for_byte": 4,
+  "original_vector_backs": 2,
+  "no_additional_visible_text": true,
+  "no_external_files": true,
+  "all_cards_complete_and_uncropped": true,
+  "source_face_bounds": [
+    [
+      313.3925544114554,
+      177.58653960332424,
+      1203.328094727162,
+      1413.2035333636231
+    ],
+    [
+      1598.3921601129784,
+      159.81134136501578,
+      2602.9451941272646,
+      1187.091911793336
+    ],
+    [
+      3023.4870074311484,
+      222.13388423289337,
+      3879.9421394557407,
+      1449.1194662514358
+    ],
+    [
+      340.16953861267876,
+      1648.9634621983241,
+      1256.9816617693093,
+      2869.6005560546378
+    ],
+    [
+      1718.751902361777,
+      1871.7358082731203,
+      2479.117212477674,
+      2950.707953308299
+    ],
+    [
+      2977.2501500797284,
+      1634.8802337024426,
+      3846.1415664547426,
+      2863.784252191654
+    ]
+  ],
+  "shadow_margin_pixels": 105,
+  "projection": "Orthographic projection of rigid 3D cards; paper thickness 6.5 SVG units.",
+  "individual_svgs": 6,
+  "export_png_alpha_range": [
+    0,
+    255
+  ],
+  "export_png_visible_bounds": [
+    299,
+    158,
+    3935,
+    3020
+  ],
+  "transparent_png_corners_verified": true
+}
