@@ -1,0 +1,62 @@
+[
+  {
+    "file": "01_Blick_Standing_Transparent.png",
+    "source_name": "картуля.svg",
+    "source_sha256": "796e85a93c9ac49150dcc4ad32ce4aee3bcce1b0e68bf6bfa4119feecaa156aa",
+    "original_vector_paths_preserved": 8,
+    "print_recreated": false,
+    "orientation": "upright, 3-degree left lean, 12-degree yaw, 4-degree pitch",
+    "rotation_xyz_degrees": [
+      4,
+      -12,
+      3
+    ],
+    "thickness": 7.0,
+    "background": "transparent",
+    "shadow": "subtle semitransparent",
+    "size": [
+      3200,
+      4200
+    ],
+    "mode": "RGBA",
+    "alpha_bounds": [
+      220,
+      341,
+      2991,
+      3895
+    ],
+    "transparent_corners": true,
+    "all_card_edges_inside_canvas": true,
+    "sha256": "9ff97d5da1b712cb8c43d0dcdf5431a979d6bc02c2bfcd7e2f936c6d8797d83b"
+  },
+  {
+    "file": "02_Task_Mars_Standing_Transparent.png",
+    "source_name": "картуля красотуля.svg",
+    "source_sha256": "ad74e735ba0da235565089eaf89c71c3c4a2144fce2b69bc4c7bfad16782cf4d",
+    "original_vector_paths_preserved": 6,
+    "print_recreated": false,
+    "orientation": "upright, 3-degree left lean, 12-degree yaw, 4-degree pitch",
+    "rotation_xyz_degrees": [
+      4,
+      -12,
+      3
+    ],
+    "thickness": 7.0,
+    "background": "transparent",
+    "shadow": "subtle semitransparent",
+    "size": [
+      3200,
+      4200
+    ],
+    "mode": "RGBA",
+    "alpha_bounds": [
+      218,
+      341,
+      2992,
+      3897
+    ],
+    "transparent_corners": true,
+    "all_card_edges_inside_canvas": true,
+    "sha256": "9137332f2ad31ba8284cc3ab243e4d9c2cf3ab4c684fa67465d5643fc0078e47"
+  }
+]
