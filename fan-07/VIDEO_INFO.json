@@ -1,0 +1,73 @@
+{
+  "duration_seconds": 4,
+  "frames": 240,
+  "fps": 60,
+  "aspect_ratio": "16:9",
+  "resolution": [
+    3840,
+    2160
+  ],
+  "background": "#FFF0D5",
+  "original_png_faces": 4,
+  "original_svg_backs": 2,
+  "original_sources_preserved": true,
+  "real_3d_positions_and_rotations": true,
+  "physical_card_thickness": 0.013,
+  "per_pixel_depth_buffer": true,
+  "reference_motion_fit": {
+    "initial_degrees": 67,
+    "fast_degrees": 273.1433968062532,
+    "decay_seconds": 0.25754666301290813,
+    "slow_degrees_per_second": 17.788165463716844,
+    "angle_rmse_degrees": 2.43528772589236
+  },
+  "slow_section_minimum_frame_margin_4k_pixels": 4.2027,
+  "all_frames_decoded": true,
+  "slow_section_maximum_frame_difference": 3.0430092811584473,
+  "files": [
+    {
+      "name": "PARA_Fan_4K.mp4",
+      "sha256": "ed767de1851f0267bf01ecdbf88c522a0e459373aacaa9e7d24ea8549eda47d8",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 3840,
+            "height": 2160,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "4.000000",
+          "size": "22716234"
+        }
+      }
+    },
+    {
+      "name": "PARA_Fan_1080p.mp4",
+      "sha256": "dd7968df0568ed0eecd6af51545cc639cafbfcd20afc64eda1ba0e7b359cb121",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "60/1",
+            "nb_read_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "4.000000",
+          "size": "8838350"
+        }
+      }
+    }
+  ]
+}
