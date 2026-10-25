@@ -1,0 +1,84 @@
+{
+  "type": "Photo-based cinemagraph with independent low-amplitude background hand-region animation",
+  "duration_seconds": 6,
+  "frames": 360,
+  "fps": 60,
+  "output_resolution": [
+    3840,
+    2160
+  ],
+  "aspect_ratio": "16:9",
+  "photographic_source_resolution": [
+    1672,
+    941
+  ],
+  "photographic_background_upscaled": true,
+  "original_print_artwork_composited_at_output_resolution": true,
+  "foreground_original_artwork": [
+    "box front",
+    "cream font card face",
+    "aqua task card face",
+    "two deck top backs"
+  ],
+  "background_held_card_appearance": "Image-generated from supplied reference designs",
+  "independent_animated_hand_groups": 3,
+  "camera": "locked",
+  "audio": false,
+  "all_frames_decoded": true,
+  "max_mean_frame_difference": 0.2849413752555847,
+  "video_probes": [
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "360"
+        }
+      ],
+      "format": {
+        "duration": "6.000000",
+        "size": "7431800"
+      }
+    },
+    {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "60/1",
+          "nb_read_frames": "360"
+        }
+      ],
+      "format": {
+        "duration": "6.000000",
+        "size": "2336205"
+      }
+    }
+  ],
+  "files": [
+    {
+      "name": "PARA_Game_Night_6s_4K60.mp4",
+      "bytes": 7431800,
+      "sha256": "a2282786873b1874b7bc9c93d698f46e3921e6e5146aa8295e428be7bc7f9b9e"
+    },
+    {
+      "name": "PARA_Game_Night_6s_1080p60.mp4",
+      "bytes": 2336205,
+      "sha256": "47ab9f06a7af98306845b6723bd90aa12f911c4e053f878bf3439d0b1dfb892b"
+    },
+    {
+      "name": "PARA_Game_Night_Poster.jpg",
+      "bytes": 2151748,
+      "sha256": "6d71571cecd7aacd31396b8291a416b888b24b6446cadda2e40c234f68067196"
+    }
+  ]
+}
