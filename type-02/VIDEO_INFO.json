@@ -1,0 +1,40 @@
+{
+  "duration_seconds": 4,
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "frames": 120,
+  "cut_time_seconds": 2,
+  "palette": {
+    "pink": "#FF0056",
+    "light": "#FFF0D5"
+  },
+  "original_contours_and_fills_unchanged": true,
+  "individual_glyph_positions_unchanged": true,
+  "only_transform": "uniform scale and translation of the entire composition",
+  "native_svg_supersampling": 2,
+  "sources": [
+    {
+      "name": "create-your.svg",
+      "bounds": [
+        295.506779549932,
+        609.681,
+        7131.55,
+        4013.845131567809
+      ],
+      "sha256": "03aadf6f6428ee2d0e834dfd839f5ccb21907416fc672901e0a4a149eecfbed2"
+    },
+    {
+      "name": "pair.svg",
+      "bounds": [
+        -5.5883427663161456e-08,
+        -3.857769359427721e-05,
+        3214.079255596564,
+        2293.72
+      ],
+      "sha256": "e2363713c1f216d99569bb6c5fc2e2061331246a93213633fa29cf59805f453b"
+    }
+  ]
+}
