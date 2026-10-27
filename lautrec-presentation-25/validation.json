@@ -1,0 +1,12 @@
+{
+  "slides": 20,
+  "unique_works": 18,
+  "all_18_work_titles_and_accessions_match_official_AIC_dataset": true,
+  "all_18_museum_record_links_present": true,
+  "docx_opens": true,
+  "zip_integrity": true,
+  "javascript_syntax": "node --check passed",
+  "museum_image_downloads": "not verified; blocked by network access to museum domains",
+  "images_in_zip": false,
+  "word_count_speech": 2326
+}

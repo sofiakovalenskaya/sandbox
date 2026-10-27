@@ -1,0 +1,19 @@
+﻿Номер,Название,Оригинальное название,Дата,Музей,Инвентарный номер,Музейная карточка,API,Тип
+1,«Мулен Руж. Ла Гулю»,"Moulin Rouge, La Goulue",1891,Art Institute of Chicago,1954.1193,https://www.artic.edu/artworks/82287,https://api.artic.edu/api/v1/artworks/82287,Рекламная афиша
+2,«Амбассадёр: Аристид Брюан»,Ambassadeurs: Aristide Bruant,1892,Art Institute of Chicago,1948.450,https://www.artic.edu/artworks/63620,https://api.artic.edu/api/v1/artworks/63620,Рекламная афиша
+3,«Эльдорадо: Аристид Брюан»,Eldorado: Aristide Bruant,1892,Art Institute of Chicago,1949.1024,https://www.artic.edu/artworks/67194,https://api.artic.edu/api/v1/artworks/67194,Рекламная афиша
+4,«Аристид Брюан в своём кабаре»,"Aristide Bruant, in His Cabaret",1893,Art Institute of Chicago,1949.1005,https://www.artic.edu/artworks/67172,https://api.artic.edu/api/v1/artworks/67172,Рекламная афиша
+5,«Японский диван»,Divan Japonais,1893,Art Institute of Chicago,1949.1002,https://www.artic.edu/artworks/67166,https://api.artic.edu/api/v1/artworks/67166,Рекламная афиша
+6,«Жанна Авриль»,Jane Avril,1893,Art Institute of Chicago,1949.1004,https://www.artic.edu/artworks/67170,https://api.artic.edu/api/v1/artworks/67170,Рекламная афиша
+7,«Жанна Авриль»,Jane Avril,1899,Art Institute of Chicago,1949.1009,https://www.artic.edu/artworks/67181,https://api.artic.edu/api/v1/artworks/67181,Рекламная афиша
+8,«Труппа мадемуазель Эглантин»,Mademoiselle Eglantine's Troupe,1896,Art Institute of Chicago,1936.220,https://www.artic.edu/artworks/110647,https://api.artic.edu/api/v1/artworks/110647,Рекламная афиша
+9,«Мэй Бельфор»,May Belfort,1895,Art Institute of Chicago,1949.1007,https://www.artic.edu/artworks/67177,https://api.artic.edu/api/v1/artworks/67177,Рекламная афиша
+10,«Мэй Милтон»,May Milton,1895,Art Institute of Chicago,1948.451,https://www.artic.edu/artworks/63622,https://api.artic.edu/api/v1/artworks/63622,Рекламная афиша
+11,«Ла Ревю бланш»,La revue blanche,1895,Art Institute of Chicago,1932.1322,https://www.artic.edu/artworks/13606,https://api.artic.edu/api/v1/artworks/13606,Рекламная афиша
+12,«Царица радости»,Reine de Joie,1892,Art Institute of Chicago,1948.449,https://www.artic.edu/artworks/63616,https://api.artic.edu/api/v1/artworks/63616,Рекламная афиша
+13,«Немецкий Вавилон»,Babylone d'Allemagne,1894,Art Institute of Chicago,1949.1006,https://www.artic.edu/artworks/67175,https://api.artic.edu/api/v1/artworks/67175,Рекламная афиша
+14,«Цепь Симпсона»,The Simpson Chain,1896,Art Institute of Chicago,2015.278,https://www.artic.edu/artworks/180664,https://api.artic.edu/api/v1/artworks/180664,Рекламная афиша
+15,«Современный ремесленник»,L'Artisan Moderne,1890-е; датировку выбранного оттиска см. в музейной карточке,Art Institute of Chicago,1932.1320,https://www.artic.edu/artworks/13602,https://api.artic.edu/api/v1/artworks/13602,Рекламная афиша
+16,«Фотограф Сеско»,The Photographer Sescau,1894,Art Institute of Chicago,1959.549,https://www.artic.edu/artworks/11136,https://api.artic.edu/api/v1/artworks/11136,Рекламная афиша
+17,Обложка первого альбома «Оригинальная гравюра»,Cover for the first album of L'Estampe originale,1893,Art Institute of Chicago,1932.1326,https://www.artic.edu/artworks/13620,https://api.artic.edu/api/v1/artworks/13620,"Обложка альбома; сравнительный пример, не уличный плакат"
+18,«Мисс Лои Фуллер»,Miss Loïe Fuller,1893,Art Institute of Chicago,1931.451,https://www.artic.edu/artworks/8807,https://api.artic.edu/api/v1/artworks/8807,"Отдельная художественная литография; сравнительный пример, не рекламная афиша"

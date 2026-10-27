@@ -1,0 +1,133 @@
+{
+  "source": "https://raw.githubusercontent.com/art-institute-of-chicago/api-data/master/getting-started/allArtworks.jsonl",
+  "retrieved": "2026-10-27",
+  "records": [
+    {
+      "id": 8807,
+      "title": "Miss Loïe Fuller",
+      "main_reference_number": "1931.451",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 11136,
+      "title": "The Photographer Sescau",
+      "main_reference_number": "1959.549",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 13602,
+      "title": "L'Artisan Moderne",
+      "main_reference_number": "1932.1320",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 13606,
+      "title": "La revue blanche",
+      "main_reference_number": "1932.1322",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 13620,
+      "title": "Cover for the first album of L'Estampe originale",
+      "main_reference_number": "1932.1326",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 63616,
+      "title": "Reine de Joie",
+      "main_reference_number": "1948.449",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 63620,
+      "title": "Ambassadeurs: Aristide Bruant",
+      "main_reference_number": "1948.450",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 63622,
+      "title": "May Milton",
+      "main_reference_number": "1948.451",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 67166,
+      "title": "Divan Japonais",
+      "main_reference_number": "1949.1002",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 67170,
+      "title": "Jane Avril",
+      "main_reference_number": "1949.1004",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 67172,
+      "title": "Aristide Bruant, in His Cabaret",
+      "main_reference_number": "1949.1005",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 67175,
+      "title": "Babylone d'Allemagne",
+      "main_reference_number": "1949.1006",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 67177,
+      "title": "May Belfort",
+      "main_reference_number": "1949.1007",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 67181,
+      "title": "Jane Avril",
+      "main_reference_number": "1949.1009",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 67194,
+      "title": "Eldorado: Aristide Bruant",
+      "main_reference_number": "1949.1024",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 82287,
+      "title": "Moulin Rouge, La Goulue",
+      "main_reference_number": "1954.1193",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 110647,
+      "title": "Mademoiselle Eglantine's Troupe",
+      "main_reference_number": "1936.220",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    },
+    {
+      "id": 180664,
+      "title": "The Simpson Chain",
+      "main_reference_number": "2015.278",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Henri de Toulouse-Lautrec"
+    }
+  ],
+  "scope": "Verified title, artist attribution and accession number. This snapshot does not verify all dates, media descriptions or image downloads."
+}
